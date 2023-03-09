@@ -6,11 +6,13 @@ export interface props {
     texto: string;
     color?: string;
     ancho?: boolean;
+    accion: (numeroTexto:string) => void;
 }
 
-export const BotonCalculadora = ({ texto, color = "#2D2D2D", ancho = false }: props) => {
+export const BotonCalculadora = ({ texto, color = "#2D2D2D", ancho = false, accion }: props) => {
+    
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={ () => accion(texto)}>
             <View style={{ ...styles.boton, backgroundColor: color, width: (ancho) ? 180 : 80 }}>
                 <Text style={{ ...styles.botonTexto, color: (color === "#9B9B9B") ? "black" : "white" }}>{texto}</Text>
             </View>

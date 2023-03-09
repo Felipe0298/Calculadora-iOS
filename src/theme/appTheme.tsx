@@ -13,12 +13,14 @@ export const styles = StyleSheet.create({
     resultado: {
         color: "white",
         fontSize: 60,
-        textAlign: "right"
+        textAlign: "right",
+
     },
     resultadoPequeno:{
         color: "rgba(255,255,255,0.5)",
         fontSize: 30,
-        textAlign: "right"
+        textAlign: "right",
+        marginBottom:10
     },
     boton:{
         height:80,
